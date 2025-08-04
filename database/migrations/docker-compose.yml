@@ -18,7 +18,7 @@ services:
     image: mysql:8.0
     container_name: mysql_db
     ports:
-      - "3306:3306"
+      - "3306:3306"   # Host port 3306 → Container port 3306
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: laravel
@@ -28,4 +28,4 @@ services:
       - db_data:/var/lib/mysql
 
 volumes:
-  db_data:
+  db_data:s
